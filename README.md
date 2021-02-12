@@ -16,3 +16,15 @@ If your dataset contains a lot of outliers, the robust scaler is recommended for
 Normalizationis an importtant preprocessing techniques for Data that involve similairity calculation such as cosine similairty. 
 
 Machine learning such as liear regression work well when the numeric features are normally distributed. Transformer are applied in other to convert data with different distribution to a form that is uniform or normally ditributed. The Quantile tranformer is used in this repository
+
+This repository also contains working with outliers and novelties.
+
+An outliers is a datapoint that differs significantly fromother dataset point in the samedataset.
+A novelty is a data point encountered in prediction or testing that differs significantly from data points in training.
+Algorithms used for determining outliers are unsupervised while algorithms used for novelties are semi-supervised
+Three algorithmsare implemented in this study,they are the
+- local outlier factor which uses nearest neighbor algorithm under the hood
+- Elliptic envelope which tries to fit an ellipse around the dense point and
+- Isolation forest which uses a randomforestof decision trees toidentify outliers
+
+All these algoriths canbe used to identify novelties too
